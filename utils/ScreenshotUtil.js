@@ -5,9 +5,24 @@ async function takeScreenshot(
     fileName
 ) {
 
+    // Create screenshots folder
+    // if not exists
+    if (
+        !fs.existsSync(
+            'screenshots'
+        )
+    ) {
+
+        fs.mkdirSync(
+            'screenshots'
+        );
+    }
+
+    // Capture screenshot
     let image =
         await driver.takeScreenshot();
 
+    // Save screenshot
     fs.writeFileSync(
         `screenshots/${fileName}.png`,
         image,
@@ -15,4 +30,5 @@ async function takeScreenshot(
     );
 }
 
-module.exports = takeScreenshot;
+module.exports =
+    takeScreenshot;
