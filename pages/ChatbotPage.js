@@ -41,24 +41,40 @@ class ChatbotPage {
 
     async getLastBotMessage() {
 
-    // Wait until bot message appears
-    await this.driver.wait(
+        // Wait until typing disappears
+        await this.driver.wait(
+            async () => {
 
-        until.elementLocated(
-            this.botMessages
-        ),
+                let messages =
+                    await this.driver.findElements(
+                        this.botMessages
+                    );
 
-        10000
-    );
+                let lastText =
+                    await messages[
+                        messages.length - 1
+                    ].getText();
 
-    let messages =
-        await this.driver.findElements(
-            this.botMessages
+                return !lastText.includes(
+                    "Bot is typing..."
+                );
+
+            },
+
+            10000
         );
 
-    return await messages[
-        messages.length - 1
-    ].getText();
+        // Get latest messages
+        let messages =
+            await this.driver.findElements(
+                this.botMessages
+            );
+
+        // Return latest bot response
+        return await messages[
+            messages.length - 1
+        ].getText();
+
     }
 
 }

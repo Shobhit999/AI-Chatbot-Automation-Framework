@@ -1,6 +1,6 @@
 const userInput =
     document.getElementById("user-input");
-
+console.log("GitHub Jenkins Integration");
 userInput.addEventListener("keypress", function(event) {
 
     if (event.key === "Enter") {

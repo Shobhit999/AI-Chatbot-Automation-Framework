@@ -2,6 +2,8 @@ const { Builder }
     = require('selenium-webdriver');
 
 require('chromedriver');
+require('geckodriver');
+require('edgedriver');
 
 const assert = require('assert');
 
@@ -11,9 +13,9 @@ const ChatbotPage =
 const takeScreenshot =
     require('../utils/ScreenshotUtil');
 
-describe(
-    'Chatbot Automation Tests',
-    function () {
+const browser = process.env.BROWSER || 'chrome';
+
+describe('Chatbot Automation Tests', function () {
 
     this.timeout(30000);
 
@@ -25,7 +27,7 @@ describe(
 
         driver =
             await new Builder()
-                .forBrowser('chrome')
+                .forBrowser(browser)
                 .build();
 
         chatbot =
