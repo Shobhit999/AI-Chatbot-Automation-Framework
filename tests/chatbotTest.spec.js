@@ -1,9 +1,8 @@
+
 const { Builder }
     = require('selenium-webdriver');
 
 require('chromedriver');
-require('geckodriver');
-require('edgedriver');
 
 const assert = require('assert');
 
@@ -13,37 +12,15 @@ const ChatbotPage =
 const takeScreenshot =
     require('../utils/ScreenshotUtil');
 
-const browser = process.env.BROWSER || 'chrome';
+const browser =
+    process.env.BROWSER || 'chrome';
 
-describe('Chatbot Automation Tests', function () {
+
+describe(
+    'Chatbot Parallel Tests',
+    function () {
 
     this.timeout(30000);
-
-    let driver;
-
-    let chatbot;
-
-    before(async () => {
-
-        driver =
-            await new Builder()
-                .forBrowser(browser)
-                .build();
-
-        chatbot =
-            new ChatbotPage(driver);
-
-        await driver.get(
-            'http://127.0.0.1:5500/index.html'
-        );
-    });
-
-    after(async () => {
-
-        await driver.sleep(5000);
-
-        await driver.quit();
-    });
 
     const testCases = [
 
@@ -75,26 +52,43 @@ describe('Chatbot Automation Tests', function () {
     testCases.forEach((test) => {
 
         it(
-            `Validate chatbot response for ${test.input}`,
+            `Validate ${test.input}`,
             async () => {
 
-            await chatbot.enterMessage(
-                test.input
-            );
-
-            await chatbot.clickSend();
-
-
-            let response =
-                await chatbot.getLastBotMessage();
-
-            console.log(
-                "Bot Response:",
-                response
-            );
+            // New Browser Per Test
+            let driver =
+                await new Builder()
+                    .forBrowser(browser)
+                    .build();
 
             try {
 
+                // Open chatbot
+                await driver.get(
+                    'http://127.0.0.1:5500/index.html'
+                );
+
+                let chatbot =
+                    new ChatbotPage(driver);
+
+                // Enter Message
+                await chatbot.enterMessage(
+                    test.input
+                );
+
+                // Click Send
+                await chatbot.clickSend();
+
+                // Get Response
+                let response =
+                    await chatbot.getLastBotMessage();
+
+                console.log(
+                    `Response for ${test.input}:`,
+                    response
+                );
+
+                // Validation
                 assert.ok(
                     response.includes(
                         test.expected
@@ -109,6 +103,11 @@ describe('Chatbot Automation Tests', function () {
                 );
 
                 throw error;
+
+            } finally {
+
+                // Close Browser
+                await driver.quit();
             }
         });
     });

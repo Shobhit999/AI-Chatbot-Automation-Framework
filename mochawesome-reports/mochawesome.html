@@ -15,14 +15,14 @@
       <div class="container">
         <div class="report-info-cnt">
           <h1 class="report-title">ChatbotProject</h1>
-          <h3 class="report-date">Monday, May 25 2026, 09:29pm</h3>
+          <h3 class="report-date">Monday, May 25 2026, 09:43pm</h3>
         </div>
         <div class="nav-right">
           <div class="quick-summary-cnt">
               <ul class="list-unstyled quick-summary">
-                <li class="qs-item summary-duration" title="Duration">13.595<span>S</span></li>
+                <li class="qs-item summary-duration" title="Duration">12.75<span>S</span></li>
                 <li class="qs-item summary-suites" title="Suites">1</li>
-                <li class="qs-item summary-tests" title="Tests">4</li>
+                <li class="qs-item summary-tests" title="Tests">0</li>
                 <li class="qs-item summary-passes" title="Passed" data-filter="passed">4</li>
                 <li class="qs-item summary-failures" title="Failed" data-filter="failed">0</li>
                 <li class="qs-item summary-pending" title="Pending" data-filter="pending">0</li>
@@ -37,7 +37,7 @@
       <div class="container">
           <div class="row">
             <div class="summary-col summary-duration">
-              <h1 class="summary-count">13.595<span>S</span></h1>
+              <h1 class="summary-count">12.75<span>S</span></h1>
               <h4 class="summary-label">S</h4>
             </div>
             <div class="summary-col summary-suites" title="Suites">
@@ -45,7 +45,7 @@
               <h4 class="summary-label">Suite</h4>
             </div>
             <div class="summary-col summary-tests" title="Tests">
-              <h1 class="summary-count">4</h1>
+              <h1 class="summary-count">0</h1>
               <h4 class="summary-label">Tests</h4>
             </div>
             <div class="summary-col summary-passes" data-filter="passed" title="Passed">
@@ -65,115 +65,13 @@
     <div class="statusbar">
       <div class="container">
           <div class="row">
-            <div class="status-item status-item-pending-pct">0% Pending</div>
-            <div class="status-item status-item-passing-pct success">100% Passing</div>
+            <div class="status-item status-item-pending-pct">NaN% Pending</div>
+            <div class="status-item status-item-passing-pct success">Infinity% Passing</div>
           </div>      </div>
     </div>
 
     <!-- Suites -->
     <div class="details container">
-            <section class="suite-wrap">
-          <div id="fbb5f860-4ea6-4a55-8115-23151e8ec14b" class="suite has-tests has-passed">
-            <h3 class="suite-title">Chatbot Automation Tests</h3>
-            <h5 class="suite-filename">\tests\chatbotTest.spec.js</h5>
-            <!-- Suite Chart -->
-            <div class="suite-chart-wrap">
-              <canvas id="fbb5f860-4ea6-4a55-8115-23151e8ec14b" class="suite-chart" width="50" height="50" data-total-passes="4" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
-            </div>
-            <div class="suite-data-wrap">
-              <!-- Suite Summary -->
-              <ul class="suite-summary list-unstyled">
-                <li class="suite-summary-item duration">7.360 s</li>
-                <li class="suite-summary-item tests">4</li>
-                <li class="suite-summary-item passed">4</li>
-                <li class="suite-summary-item failed">0</li>
-                <li class="suite-summary-item pending">0</li>
-              </ul>
-              <!-- Test Info -->
-              <div class="suite-test-wrap">
-                <div class="suite-test-header" data-toggle="collapse" data-target="#fbb5f860-4ea6-4a55-8115-23151e8ec14b-test-list">
-                  <h4 class="suite-test-header-title">Tests</h4>
-                </div>
-                <div id="fbb5f860-4ea6-4a55-8115-23151e8ec14b-test-list" class="list-group test-list collapse in">
-                    <div id="a1b74df1-c2f0-432b-ad10-134df387d3b2" class="list-group-item test passed">
-          <!-- Test Heading -->
-          <div class="test-heading">
-            <h4 class="test-title">
-              <span class="text-muted hidden"> it </span>
-              Validate chatbot response for hello
-            </h4>
-            <div class="pull-right">
-              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#a1b74df1-c2f0-432b-ad10-134df387d3b2 > .test-code.collapse">Code</button>
-              <span class="test-duration slow">1.891 s</span>
-            </div>
-          </div>
-          <!-- Test Errors -->
-          <!-- Test Code -->
-          <div class="test-code collapse">
-            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <br>            <span class="hljs-keyword">await</span> chatbot.enterMessage(<br>                test.input<br>            );<br>            <span class="hljs-keyword">await</span> chatbot.clickSend();<br>            <span class="hljs-keyword">let</span> response =<br>                <span class="hljs-keyword">await</span> chatbot.getLastBotMessage();<br>            <span class="hljs-built_in">console</span>.log(<br>                <span class="hljs-string">"Bot Response:"</span>,<br>                response<br>            );<br>            <span class="hljs-keyword">try</span> {<br>                assert.ok(<br>                    response.includes(<br>                        test.expected<br>                    )<br>                );<br>            } <span class="hljs-keyword">catch</span>(error) {<br>                <span class="hljs-keyword">await</span> takeScreenshot(<br>                    driver,<br>                    test.input<br>                );<br>                <span class="hljs-keyword">throw</span> error;<br>            }</code></pre>
-          </div>
-          <!-- Test Error Stack -->
-        </div>            <div id="d21541ab-f288-411a-b4a0-ff3e37c754d8" class="list-group-item test passed">
-          <!-- Test Heading -->
-          <div class="test-heading">
-            <h4 class="test-title">
-              <span class="text-muted hidden"> it </span>
-              Validate chatbot response for help
-            </h4>
-            <div class="pull-right">
-              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#d21541ab-f288-411a-b4a0-ff3e37c754d8 > .test-code.collapse">Code</button>
-              <span class="test-duration slow">1.879 s</span>
-            </div>
-          </div>
-          <!-- Test Errors -->
-          <!-- Test Code -->
-          <div class="test-code collapse">
-            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <br>            <span class="hljs-keyword">await</span> chatbot.enterMessage(<br>                test.input<br>            );<br>            <span class="hljs-keyword">await</span> chatbot.clickSend();<br>            <span class="hljs-keyword">let</span> response =<br>                <span class="hljs-keyword">await</span> chatbot.getLastBotMessage();<br>            <span class="hljs-built_in">console</span>.log(<br>                <span class="hljs-string">"Bot Response:"</span>,<br>                response<br>            );<br>            <span class="hljs-keyword">try</span> {<br>                assert.ok(<br>                    response.includes(<br>                        test.expected<br>                    )<br>                );<br>            } <span class="hljs-keyword">catch</span>(error) {<br>                <span class="hljs-keyword">await</span> takeScreenshot(<br>                    driver,<br>                    test.input<br>                );<br>                <span class="hljs-keyword">throw</span> error;<br>            }</code></pre>
-          </div>
-          <!-- Test Error Stack -->
-        </div>            <div id="6dceee51-bbc3-4044-b30c-d009586b7298" class="list-group-item test passed">
-          <!-- Test Heading -->
-          <div class="test-heading">
-            <h4 class="test-title">
-              <span class="text-muted hidden"> it </span>
-              Validate chatbot response for payment
-            </h4>
-            <div class="pull-right">
-              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#6dceee51-bbc3-4044-b30c-d009586b7298 > .test-code.collapse">Code</button>
-              <span class="test-duration slow">1.800 s</span>
-            </div>
-          </div>
-          <!-- Test Errors -->
-          <!-- Test Code -->
-          <div class="test-code collapse">
-            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <br>            <span class="hljs-keyword">await</span> chatbot.enterMessage(<br>                test.input<br>            );<br>            <span class="hljs-keyword">await</span> chatbot.clickSend();<br>            <span class="hljs-keyword">let</span> response =<br>                <span class="hljs-keyword">await</span> chatbot.getLastBotMessage();<br>            <span class="hljs-built_in">console</span>.log(<br>                <span class="hljs-string">"Bot Response:"</span>,<br>                response<br>            );<br>            <span class="hljs-keyword">try</span> {<br>                assert.ok(<br>                    response.includes(<br>                        test.expected<br>                    )<br>                );<br>            } <span class="hljs-keyword">catch</span>(error) {<br>                <span class="hljs-keyword">await</span> takeScreenshot(<br>                    driver,<br>                    test.input<br>                );<br>                <span class="hljs-keyword">throw</span> error;<br>            }</code></pre>
-          </div>
-          <!-- Test Error Stack -->
-        </div>            <div id="bc6d3873-8776-48d9-8e7c-6e620a1b1120" class="list-group-item test passed">
-          <!-- Test Heading -->
-          <div class="test-heading">
-            <h4 class="test-title">
-              <span class="text-muted hidden"> it </span>
-              Validate chatbot response for bye
-            </h4>
-            <div class="pull-right">
-              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#bc6d3873-8776-48d9-8e7c-6e620a1b1120 > .test-code.collapse">Code</button>
-              <span class="test-duration slow">1.790 s</span>
-            </div>
-          </div>
-          <!-- Test Errors -->
-          <!-- Test Code -->
-          <div class="test-code collapse">
-            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <br>            <span class="hljs-keyword">await</span> chatbot.enterMessage(<br>                test.input<br>            );<br>            <span class="hljs-keyword">await</span> chatbot.clickSend();<br>            <span class="hljs-keyword">let</span> response =<br>                <span class="hljs-keyword">await</span> chatbot.getLastBotMessage();<br>            <span class="hljs-built_in">console</span>.log(<br>                <span class="hljs-string">"Bot Response:"</span>,<br>                response<br>            );<br>            <span class="hljs-keyword">try</span> {<br>                assert.ok(<br>                    response.includes(<br>                        test.expected<br>                    )<br>                );<br>            } <span class="hljs-keyword">catch</span>(error) {<br>                <span class="hljs-keyword">await</span> takeScreenshot(<br>                    driver,<br>                    test.input<br>                );<br>                <span class="hljs-keyword">throw</span> error;<br>            }</code></pre>
-          </div>
-          <!-- Test Error Stack -->
-        </div>        </div>
-              </div>
-            </div>
-        
-        
-          </div>
-        </section>
     </div>
 
     <footer>
@@ -188,9 +86,6 @@
       <nav class="menu">
         <button class="nav-menu-btn close-menu"><i class="icon-failed"></i></button>
         <ul class="list-unstyled main-menu">
-                <li class="nav-menu-item">
-                <a href="#fbb5f860-4ea6-4a55-8115-23151e8ec14b" class="nav-menu-item-link has-passes">Chatbot Automation Tests</a>
-            </li>
         </ul>
       </nav>
     </div>

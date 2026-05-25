@@ -1,0 +1,28 @@
+name: Chatbot Automation CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  selenium-test:
+
+    runs-on: windows-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Selenium Tests
+        run: npx mocha tests/chatbotTest.spec.js --parallel --jobs 4 --reporter mochawesome
