@@ -65,7 +65,7 @@ describe(
 
                 // Open chatbot
                 await driver.get(
-                    'http://127.0.0.1:5500/index.html'
+                    'https://your-netlify-url.netlify.app'
                 );
 
                 let chatbot =
