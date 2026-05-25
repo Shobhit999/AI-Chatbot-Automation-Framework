@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mochawesome Report Card</title>
+    
+    <link rel="stylesheet" href="css/mochawesome.css">
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="report-info-cnt">
+          <h1 class="report-title">ChatbotProject</h1>
+          <h3 class="report-date">Monday, May 25 2026, 05:47pm</h3>
+        </div>
+        <div class="nav-right">
+          <div class="quick-summary-cnt">
+              <ul class="list-unstyled quick-summary">
+                <li class="qs-item summary-duration" title="Duration">21.884<span>S</span></li>
+                <li class="qs-item summary-suites" title="Suites">1</li>
+                <li class="qs-item summary-tests" title="Tests">4</li>
+                <li class="qs-item summary-passes" title="Passed" data-filter="passed">2</li>
+                <li class="qs-item summary-failures" title="Failed" data-filter="failed">2</li>
+                <li class="qs-item summary-pending" title="Pending" data-filter="pending">0</li>
+              </ul>          </div>
+          <button class="nav-menu-btn open-menu"><i class="icon-menu"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Report Summary -->
+    <div class="summary">
+      <div class="container">
+          <div class="row">
+            <div class="summary-col summary-duration">
+              <h1 class="summary-count">21.884<span>S</span></h1>
+              <h4 class="summary-label">S</h4>
+            </div>
+            <div class="summary-col summary-suites" title="Suites">
+              <h1 class="summary-count">1</h1>
+              <h4 class="summary-label">Suite</h4>
+            </div>
+            <div class="summary-col summary-tests" title="Tests">
+              <h1 class="summary-count">4</h1>
+              <h4 class="summary-label">Tests</h4>
+            </div>
+            <div class="summary-col summary-passes" data-filter="passed" title="Passed">
+              <h1 class="summary-count">2</h1>
+              <h4 class="summary-label">Passed</h4>
+            </div>
+            <div class="summary-col summary-failures" data-filter="failed" title="Failed">
+              <h1 class="summary-count">2</h1>
+              <h4 class="summary-label">Failed</h4>
+            </div>
+            <div class="summary-col summary-pending" data-filter="pending" title="Pending">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Pending</h4>
+            </div>
+          </div>      </div>
+    </div>
+    <div class="statusbar">
+      <div class="container">
+          <div class="row">
+            <div class="status-item status-item-pending-pct">0% Pending</div>
+            <div class="status-item status-item-passing-pct danger">50% Passing</div>
+          </div>      </div>
+    </div>
+
+    <!-- Suites -->
+    <div class="details container">
+            <section class="suite-wrap">
+          <div id="9545014c-7b24-45f3-974f-394a368f8c2f" class="suite has-tests has-passed has-failed">
+            <h3 class="suite-title">Chatbot Automation Tests</h3>
+            <h5 class="suite-filename">\tests\chatbotTest.spec.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="9545014c-7b24-45f3-974f-394a368f8c2f" class="suite-chart" width="50" height="50" data-total-passes="2" data-total-failures="2" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">15.184 s</li>
+                <li class="suite-summary-item tests">4</li>
+                <li class="suite-summary-item passed">2</li>
+                <li class="suite-summary-item failed">2</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#9545014c-7b24-45f3-974f-394a368f8c2f-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="9545014c-7b24-45f3-974f-394a368f8c2f-test-list" class="list-group test-list collapse in">
+                    <div id="575d217c-9104-4df3-afeb-1a89616a06a4" class="list-group-item test failed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Validate chatbot response for hello
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#575d217c-9104-4df3-afeb-1a89616a06a4 > .test-code.collapse">Code</button>
+              <span class="test-duration ">5.228 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+            <p class="test-error-message">AssertionError: The expression evaluated to a falsy value:
+        
+          assert.ok(
+        
+              <button class="btn btn-link btn-sm toggle-btn toggle-stack collapsed" data-toggle="collapse" data-target="#575d217c-9104-4df3-afeb-1a89616a06a4 > .test-error-stack.collapse">Stack</button>
+            </p>
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <br>            <span class="hljs-comment">// Input Box</span><br>            <span class="hljs-keyword">let</span> inputBox =<br>                <span class="hljs-keyword">await</span> driver.findElement(<br>                    By.id(<span class="hljs-string">'user-input'</span>)<br>                );<br>            <span class="hljs-comment">// Enter Message</span><br>            <span class="hljs-keyword">await</span> inputBox.sendKeys(<br>                test.input<br>            );<br>            <span class="hljs-comment">// Send Button</span><br>            <span class="hljs-keyword">let</span> sendButton =<br>                <span class="hljs-keyword">await</span> driver.findElement(<br>                    By.id(<span class="hljs-string">'send-btn'</span>)<br>                );<br>            <span class="hljs-keyword">await</span> sendButton.click();<br>            <span class="hljs-comment">// Wait for Response</span><br>            <span class="hljs-keyword">await</span> driver.sleep(<span class="hljs-number">4500</span>);<br>            <span class="hljs-comment">// Get Bot Messages</span><br>            <span class="hljs-keyword">let</span> botMessages =<br>                <span class="hljs-keyword">await</span> driver.findElements(<br>                    By.className(<span class="hljs-string">'bot-message'</span>)<br>                );<br>            <span class="hljs-comment">// Last Message</span><br>            <span class="hljs-keyword">let</span> lastMessage =<br>                <span class="hljs-keyword">await</span> botMessages[<br>                    botMessages.length - <span class="hljs-number">1</span><br>                ].getText();<br>            <span class="hljs-built_in">console</span>.log(<br>                <span class="hljs-string">"Bot Response:"</span>,<br>                lastMessage<br>            );<br>            <span class="hljs-keyword">try</span> {<br>                assert.ok(<br>                    lastMessage.includes(<br>                        test.expected<br>                    )<br>                );<br>            } <span class="hljs-keyword">catch</span>(error) {<br>                <span class="hljs-keyword">await</span> takeScreenshot(<br>                    test.input<br>                );<br>                <span class="hljs-keyword">throw</span> error;<br>            }</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+          <div class="test-error-stack collapse">
+            <pre><code class="hljs small">AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:<br><br>  assert.ok(<br><br>    at Context.&lt;anonymous&gt; (tests\chatbotTest.spec.js:130:24)<br>    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)</code></pre>
+          </div>
+        </div>            <div id="8e6a3007-2993-4217-b9c0-95bbc402fdad" class="list-group-item test failed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Validate chatbot response for help
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#8e6a3007-2993-4217-b9c0-95bbc402fdad > .test-code.collapse">Code</button>
+              <span class="test-duration ">252 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+            <p class="test-error-message">StaleElementReferenceError: stale element reference: stale element not found
+          (Session info: chrome=148.0.7778.179)
+              <button class="btn btn-link btn-sm toggle-btn toggle-stack collapsed" data-toggle="collapse" data-target="#8e6a3007-2993-4217-b9c0-95bbc402fdad > .test-error-stack.collapse">Stack</button>
+            </p>
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <br>            <span class="hljs-comment">// Input Box</span><br>            <span class="hljs-keyword">let</span> inputBox =<br>                <span class="hljs-keyword">await</span> driver.findElement(<br>                    By.id(<span class="hljs-string">'user-input'</span>)<br>                );<br>            <span class="hljs-comment">// Enter Message</span><br>            <span class="hljs-keyword">await</span> inputBox.sendKeys(<br>                test.input<br>            );<br>            <span class="hljs-comment">// Send Button</span><br>            <span class="hljs-keyword">let</span> sendButton =<br>                <span class="hljs-keyword">await</span> driver.findElement(<br>                    By.id(<span class="hljs-string">'send-btn'</span>)<br>                );<br>            <span class="hljs-keyword">await</span> sendButton.click();<br>            <span class="hljs-comment">// Wait for Response</span><br>            <span class="hljs-keyword">await</span> driver.sleep(<span class="hljs-number">4500</span>);<br>            <span class="hljs-comment">// Get Bot Messages</span><br>            <span class="hljs-keyword">let</span> botMessages =<br>                <span class="hljs-keyword">await</span> driver.findElements(<br>                    By.className(<span class="hljs-string">'bot-message'</span>)<br>                );<br>            <span class="hljs-comment">// Last Message</span><br>            <span class="hljs-keyword">let</span> lastMessage =<br>                <span class="hljs-keyword">await</span> botMessages[<br>                    botMessages.length - <span class="hljs-number">1</span><br>                ].getText();<br>            <span class="hljs-built_in">console</span>.log(<br>                <span class="hljs-string">"Bot Response:"</span>,<br>                lastMessage<br>            );<br>            <span class="hljs-keyword">try</span> {<br>                assert.ok(<br>                    lastMessage.includes(<br>                        test.expected<br>                    )<br>                );<br>            } <span class="hljs-keyword">catch</span>(error) {<br>                <span class="hljs-keyword">await</span> takeScreenshot(<br>                    test.input<br>                );<br>                <span class="hljs-keyword">throw</span> error;<br>            }</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+          <div class="test-error-stack collapse">
+            <pre><code class="hljs small">StaleElementReferenceError: stale element reference: stale element not found<br>  (Session info: chrome=<span class="hljs-number">148.0</span><span class="hljs-number">.7778</span><span class="hljs-number">.179</span>)<br>    at <span class="hljs-built_in">Object</span>.throwDecodedError (node_modules\selenium-webdriver\lib\error.js:<span class="hljs-number">523</span>:<span class="hljs-number">15</span>)<br>    at parseHttpResponse (node_modules\selenium-webdriver\lib\http.js:<span class="hljs-number">526</span>:<span class="hljs-number">13</span>)<br>    at Executor.execute (node_modules\selenium-webdriver\lib\http.js:<span class="hljs-number">458</span>:<span class="hljs-number">28</span>)<br>    at process.processTicksAndRejections (node:internal/process/task_queues:<span class="hljs-number">103</span>:<span class="hljs-number">5</span>)<br>    at <span class="hljs-keyword">async</span> Driver.execute (node_modules\selenium-webdriver\lib\webdriver.js:<span class="hljs-number">745</span>:<span class="hljs-number">17</span>)<br>    at <span class="hljs-keyword">async</span> Context.&lt;anonymous&gt; (tests\chatbotTest.spec.js:<span class="hljs-number">96</span>:<span class="hljs-number">13</span>)</code></pre>
+          </div>
+        </div>            <div id="47fbaace-b602-4432-baf7-ddf9f26bf4c6" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Validate chatbot response for payment
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#47fbaace-b602-4432-baf7-ddf9f26bf4c6 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">4.813 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <br>            <span class="hljs-comment">// Input Box</span><br>            <span class="hljs-keyword">let</span> inputBox =<br>                <span class="hljs-keyword">await</span> driver.findElement(<br>                    By.id(<span class="hljs-string">'user-input'</span>)<br>                );<br>            <span class="hljs-comment">// Enter Message</span><br>            <span class="hljs-keyword">await</span> inputBox.sendKeys(<br>                test.input<br>            );<br>            <span class="hljs-comment">// Send Button</span><br>            <span class="hljs-keyword">let</span> sendButton =<br>                <span class="hljs-keyword">await</span> driver.findElement(<br>                    By.id(<span class="hljs-string">'send-btn'</span>)<br>                );<br>            <span class="hljs-keyword">await</span> sendButton.click();<br>            <span class="hljs-comment">// Wait for Response</span><br>            <span class="hljs-keyword">await</span> driver.sleep(<span class="hljs-number">4500</span>);<br>            <span class="hljs-comment">// Get Bot Messages</span><br>            <span class="hljs-keyword">let</span> botMessages =<br>                <span class="hljs-keyword">await</span> driver.findElements(<br>                    By.className(<span class="hljs-string">'bot-message'</span>)<br>                );<br>            <span class="hljs-comment">// Last Message</span><br>            <span class="hljs-keyword">let</span> lastMessage =<br>                <span class="hljs-keyword">await</span> botMessages[<br>                    botMessages.length - <span class="hljs-number">1</span><br>                ].getText();<br>            <span class="hljs-built_in">console</span>.log(<br>                <span class="hljs-string">"Bot Response:"</span>,<br>                lastMessage<br>            );<br>            <span class="hljs-keyword">try</span> {<br>                assert.ok(<br>                    lastMessage.includes(<br>                        test.expected<br>                    )<br>                );<br>            } <span class="hljs-keyword">catch</span>(error) {<br>                <span class="hljs-keyword">await</span> takeScreenshot(<br>                    test.input<br>                );<br>                <span class="hljs-keyword">throw</span> error;<br>            }</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="1e6afa8c-66b3-414b-9934-dda91644b1dc" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Validate chatbot response for bye
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#1e6afa8c-66b3-414b-9934-dda91644b1dc > .test-code.collapse">Code</button>
+              <span class="test-duration slow">4.891 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <br>            <span class="hljs-comment">// Input Box</span><br>            <span class="hljs-keyword">let</span> inputBox =<br>                <span class="hljs-keyword">await</span> driver.findElement(<br>                    By.id(<span class="hljs-string">'user-input'</span>)<br>                );<br>            <span class="hljs-comment">// Enter Message</span><br>            <span class="hljs-keyword">await</span> inputBox.sendKeys(<br>                test.input<br>            );<br>            <span class="hljs-comment">// Send Button</span><br>            <span class="hljs-keyword">let</span> sendButton =<br>                <span class="hljs-keyword">await</span> driver.findElement(<br>                    By.id(<span class="hljs-string">'send-btn'</span>)<br>                );<br>            <span class="hljs-keyword">await</span> sendButton.click();<br>            <span class="hljs-comment">// Wait for Response</span><br>            <span class="hljs-keyword">await</span> driver.sleep(<span class="hljs-number">4500</span>);<br>            <span class="hljs-comment">// Get Bot Messages</span><br>            <span class="hljs-keyword">let</span> botMessages =<br>                <span class="hljs-keyword">await</span> driver.findElements(<br>                    By.className(<span class="hljs-string">'bot-message'</span>)<br>                );<br>            <span class="hljs-comment">// Last Message</span><br>            <span class="hljs-keyword">let</span> lastMessage =<br>                <span class="hljs-keyword">await</span> botMessages[<br>                    botMessages.length - <span class="hljs-number">1</span><br>                ].getText();<br>            <span class="hljs-built_in">console</span>.log(<br>                <span class="hljs-string">"Bot Response:"</span>,<br>                lastMessage<br>            );<br>            <span class="hljs-keyword">try</span> {<br>                assert.ok(<br>                    lastMessage.includes(<br>                        test.expected<br>                    )<br>                );<br>            } <span class="hljs-keyword">catch</span>(error) {<br>                <span class="hljs-keyword">await</span> takeScreenshot(<br>                    test.input<br>                );<br>                <span class="hljs-keyword">throw</span> error;<br>            }</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>Report generated by <a href="http://adamgruber.github.io/mochawesome/" target="_blank">mochawesome</a>.<br>Designed and built by <a href="https://github.com/adamgruber" target="_blank">adamgruber</a>. &copy;2026.</p>
+      </div>
+    </footer>
+
+    <!-- Nav Menu -->
+    <div class="nav-menu-wrap">
+      <div class="menu-overlay close-menu"></div>
+      <nav class="menu">
+        <button class="nav-menu-btn close-menu"><i class="icon-failed"></i></button>
+        <ul class="list-unstyled main-menu">
+                <li class="nav-menu-item">
+                <a href="#9545014c-7b24-45f3-974f-394a368f8c2f" class="nav-menu-item-link has-failures">Chatbot Automation Tests</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/vendor.js"></script>
+    <script src="js/mochawesome.js"></script>
+  </body>
+</html>
