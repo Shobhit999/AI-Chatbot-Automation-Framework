@@ -65,7 +65,7 @@ describe(
 
                 // Open chatbot
                 await driver.get(
-                    'https://your-netlify-url.netlify.app'
+                    'https://your-chatbot.netlify.app'
                 );
 
                 let chatbot =
